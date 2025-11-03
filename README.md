@@ -17,7 +17,7 @@ Additionally, it also verifies if the repo has a readme and licesne.
 
 Run the CLI application with:
 ```bash
-python -m git
+python -m gitscanner
 ```
 
 ### Available Options:
@@ -35,7 +35,7 @@ python -m git
 
 Run the web dashboard with:
 ```bash
-python3 -m gitScannerApp.router
+python3 -m gitscanner.router
 ```
 
 ## Output Screenshots

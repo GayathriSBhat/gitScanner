@@ -1,3 +1,7 @@
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=False)
+
+import os
 import argparse, json, sys
 from .repo_scanner import scan_account
 from .report import print_table, write_html_report
@@ -11,14 +15,17 @@ def main():
     g.add_argument("--user", help="GitHub username to scan")
     g.add_argument("--org", help="GitHub organization to scan")
 
+    token =  os.environ.get("GITHUB_TOKEN")
+    #print(f"here is: {token}")
+
     # Optional GitHub token to increase rate limits and access private repos
-    p.add_argument("--token", help="GitHub token (optional)", default=None)
+    p.add_argument("--token", help="GitHub token (optional)", default=token)
 
     # HTTP timeout for each API request
-    p.add_argument("--timeout", type=float, default=5.0, help="HTTP timeout per request (s)")
+    p.add_argument("--timeout", type=float, default=15.0, help="HTTP timeout per request (s)")
 
     # Limit to avoid scanning very large repos exhaustively
-    p.add_argument("--max-files", type=int, default=1000, help="Max files to inspect per repo")
+    p.add_argument("--max-files", type=int, default=100, help="Max files to inspect per repo")
 
     # Output options: JSON and HTML report files
     p.add_argument("--json", dest="json_out", help="Write JSON report to this path")

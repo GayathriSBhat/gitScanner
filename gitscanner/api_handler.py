@@ -7,7 +7,7 @@ def _headers(token):
     Build HTTP headers for GitHub API requests.
     Includes authorization if a token is provided.
     """
-    h = {"Accept": "application/vnd.github+json", "User-Agent": "metron-scanner"}
+    h = {"Accept": "application/vnd.github+json", "User-Agent": "gitscanner"}
     # print("Token present?", bool(token))
     if token:
         h["Authorization"] = f"Bearer {token}"
