@@ -5,6 +5,7 @@ load_dotenv()
 import os, json
 from flask import Flask, request, jsonify, render_template_string
 from .repo_scanner import scan_account     # Custom module for scanning GitHub account
+from .report import HTML_TEMPLATE
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -24,6 +25,15 @@ def api_scan():
 
     # Return results as JSON
     return jsonify(results)
+
+# Webdashboard
+@app.route("/")
+def index():
+    target = os.environ.get("METRON_TARGET", "octocat")
+    mode = os.environ.get("METRON_MODE", "user")
+    token = os.environ.get("GITHUB_TOKEN")
+    results = scan_account(target, mode=mode, token=token)
+    return render_template_string(HTML_TEMPLATE, **results)
 
 
 # Entry point for running the app

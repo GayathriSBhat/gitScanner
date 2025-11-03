@@ -18,3 +18,6 @@ https://rich.readthedocs.io/en/latest/tables.html#
 
 python3 -m gitScannerApp --user octocat --token "$GITHUB_TOKEN"  --max-files 75
 
+# How to run web dashboard?
+
+python3 -m gitScannerApp.router
