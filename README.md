@@ -18,7 +18,17 @@ https://rich.readthedocs.io/en/latest/tables.html#
 
 # How to run cli app? 
 
-python3 -m gitScannerApp --user octocat --token "$GITHUB_TOKEN"  --max-files 75
+python -m git
+
+--user : pass the GitHub username for the repo
+--org : If it's an organization, pass the organization name 
+--token : pass the access token (for higher output volume)
+--timeout: max request time
+--max-files: Feature for large repos, limit number of files processed to increase exceution time
+--json: Displays output in .json file
+--html: Render web dashboard
+
+
 
 # How to run web dashboard?
 
