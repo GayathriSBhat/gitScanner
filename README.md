@@ -1,6 +1,11 @@
 # GitScanner
 
-![Dashboard Screenshot](https://github.com/user-attachments/assets/942b8ce8-39d6-477b-9dc9-ae2227f92902)
+Gitscanner is a  tool to check for exposed API keys, SSH keys and other sensistive data commited 
+unintentionally by users or organizations.
+
+It scans through repositories and checks where the error is and reports severity of the same.
+
+Additionally, it also verifies if the repo has a readme and licesne. 
 
 ## References
 
