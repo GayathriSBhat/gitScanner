@@ -1,5 +1,3 @@
-<img width="1849" height="961" alt="image" src="https://github.com/user-attachments/assets/942b8ce8-39d6-477b-9dc9-ae2227f92902" />
-
 # GitScanner
 
 ## References
