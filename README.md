@@ -1,3 +1,4 @@
+<img width="441" height="223" alt="Screenshot from 2025-11-03 18-27-29" src="https://github.com/user-attachments/assets/fd578eed-2dbb-4992-a836-031ec54418a1" />
 # GitScanner
 
 ## References
