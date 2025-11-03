@@ -1,3 +1,5 @@
+# GitScanner
+
 ## References
 
 Github API
@@ -13,3 +15,6 @@ https://rich.readthedocs.io/en/latest/tables.html#
 
 
 # How to run cli app? 
+
+python3 -m gitScannerApp --user octocat --token "$GITHUB_TOKEN"  --max-files 75
+
