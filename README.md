@@ -1,42 +1,42 @@
 # GitScanner
 
+![Dashboard Screenshot](https://github.com/user-attachments/assets/942b8ce8-39d6-477b-9dc9-ae2227f92902)
+
 ## References
 
-Github API
-https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28
+- [Github API Documentation](https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28)
+- [Request Rate Limit Documentation](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28)
+- [CLI Output in Tabular Format](https://rich.readthedocs.io/en/latest/tables.html#)
 
-Request Rate Limit
-https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28
+## CLI Usage
 
-
-CLI Output in Tabular Format:
-https://rich.readthedocs.io/en/latest/tables.html#
-
-
-
-# How to run cli app? 
-
+Run the CLI application with:
+```bash
 python -m git
+```
 
---user : pass the GitHub username for the repo
---org : If it's an organization, pass the organization name 
---token : pass the access token (for higher output volume)
---timeout: max request time
---max-files: Feature for large repos, limit number of files processed to increase exceution time
---json: Displays output in .json file
---html: Render web dashboard
+### Available Options:
+| Option | Description |
+|--------|-------------|
+| `--user` | GitHub username for the repo |
+| `--org` | Organization name (if applicable) |
+| `--token` | Access token for higher output volume |
+| `--timeout` | Maximum request time |
+| `--max-files` | Limit number of files processed to increase execution time |
+| `--json` | Display output in JSON format |
+| `--html` | Render web dashboard |
 
+## Web Dashboard
 
-
-# How to run web dashboard?
-
+Run the web dashboard with:
+```bash
 python3 -m gitScannerApp.router
+```
 
+## Output Screenshots
 
-# Output Screenshots
+### CLI Interface
+![CLI Output](https://github.com/user-attachments/assets/fd578eed-2dbb-4992-a836-031ec54418a1)
 
-# On CLI
-<img width="441" height="223" alt="Screenshot from 2025-11-03 18-27-29" src="https://github.com/user-attachments/assets/fd578eed-2dbb-4992-a836-031ec54418a1" />
-
-# On web dashboard
-<img width="1849" height="961" alt="Screenshot from 2025-11-03 19-22-25" src="https://github.com/user-attachments/assets/288493bf-d7d9-4d4d-9747-c9cc30494168" />
+### Web Dashboard
+![Web Dashboard](https://github.com/user-attachments/assets/288493bf-d7d9-4d4d-9747-c9cc30494168)
