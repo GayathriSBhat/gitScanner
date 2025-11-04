@@ -2,3 +2,4 @@
 SSH/
 ssh.pub/
 gitscannerenv/
+*.pub
